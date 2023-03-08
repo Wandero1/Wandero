@@ -1,0 +1,180 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather+Sans:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+/* General Styleing */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Merriweather Sans", sans-serif;
+}
+
+body{
+    min-height: 100vh;
+}
+
+/* Hero Styling */
+.hero-section{
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    background-image: linear-gradient(#333645,#333645), url("../images/hero_bg.jpg");
+    background-repeat: no-repeat;
+    background-blend-mode: color;
+    background-size: cover;
+    background-position: center;
+}
+
+.hero-section h1{
+    color: rgba(255, 255, 255, 1);
+    font-size: 62px;
+    font-weight: 400;
+}
+
+.hero-section h1 i{
+    color: #ff531b;
+}
+
+/* Styleing the Navigation Bar */
+header .logo .navbar-logo{
+    height: 67px;
+    width: 177px;
+    background-image: url("../images/wandero_logo_light.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+header{
+    z-index: 999;
+    position: fixed;
+    top:0;
+    left:0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.2% 6%;
+    transition: 0.6s;
+}
+
+header.sticky{
+    background-color: rgba(51, 54, 69, 0.8);
+    padding: 15px 100px;
+}
+
+/* Menu Styleing */
+header .menu{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header .menu a{
+    color: #fff;
+    font-size: 16px;
+    font-weight: 500;
+    text-decoration: none;
+    margin: 0 30px;
+    padding: 0 10px;
+    border-radius: 20px;
+    transition: 0.3s;
+    transition-property: color, background;
+}
+
+header .menu a:hover{
+    color: #000;
+    background: #ff531b;
+}
+
+header .btn{
+    color: #ff531b;
+    font-size: 25px;
+    cursor: pointer;
+    display: none;
+}
+
+.section-two{
+    min-height: 100vh;
+    background: #001018;
+    padding: 20px 100px;
+}
+
+.section-two h2{
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 50px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin: 30px 0;
+}
+
+@media (max-width: 1060px){
+    header .btn{
+        display: block;
+    }
+
+    header .menu{
+        position: fixed;
+        background: #333645;
+        flex-direction: column;
+        min-width: 400px;
+        height: 100vh;
+        top: 0;
+        right: -100%;
+        padding: 80px 50px;
+        transition: 0.5s;
+        transition-property: right;
+    }
+
+    header .menu.active{
+        right: 0;
+
+    }
+
+    header .menu .close-btn{
+        position: absolute;
+        top: 0;
+        left: 0;
+        margin: 25px;
+    }
+
+    header .menu a{
+        display: block;
+        font-size: 20px;
+        margin: 20px;
+        padding: 0 15px;
+    }
+}
+
+@media (max-width: 630px){
+    .hero-section h1{
+        font-size: 50px;
+        line-height: 60px;
+    }
+}
+
+.space-md{
+    padding: 10% 6%;
+}
+
+.wandero-btn{
+    background-color: #ff531b;
+    color: #333645;
+    font-size: 28px;
+    border-radius: 40px;
+    padding: 15px 30px;
+    border-color: #333645;
+}
+
+.wandero-btn:hover{
+    background-color: #333645;
+    border-color: #ff531b;
+}
+
+.button-holder{
+    padding: 15% 0 0 0;
+}
+
+.bg-grey{
+    background-color: #333645;
+}
